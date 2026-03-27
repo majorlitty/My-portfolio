@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+@theme {
+  --font-heading: var(--font-bricolage), sans-serif;
+  --font-body: var(--font-biorhyme), serif;
+  
+  --color-primary: #111111;
+  --color-secondary: #444444;
+  --color-accent: #2563EB;
+  --color-background: #FFFFFF;
+  --color-subtle: #E5E5E5;
+}

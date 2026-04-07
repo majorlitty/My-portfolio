@@ -85,7 +85,7 @@ export function Hero() {
 
   return (
     <section 
-      className="relative pt-40 pb-32 overflow-hidden" 
+      className="relative pt-28 md:pt-32 pb-20 overflow-hidden" 
       onMouseMove={handleMouseMove}
       onMouseLeave={() => {
         mouseX.set(0);
@@ -97,7 +97,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-          className="font-heading text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight text-primary max-w-5xl leading-[1.1]"
+          className="font-heading text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-primary max-w-5xl leading-[1.1]"
         >
           We build high-converting websites for local and service businesses
         </motion.h1>
@@ -106,7 +106,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
-          className="mt-8 text-lg md:text-xl text-secondary max-w-3xl leading-relaxed"
+          className="mt-6 text-lg md:text-xl text-secondary max-w-3xl leading-relaxed"
         >
           Designed to build trust, attract customers, and support your local growth - with clear upfront payments and simple ongoing maintenance.
         </motion.p>
@@ -115,7 +115,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
-          className="mt-10 flex flex-col sm:flex-row items-stretch gap-4"
+          className="mt-8 flex flex-col sm:flex-row items-stretch gap-4"
         >
           <button className="bg-primary text-background px-8 py-3 rounded-xl text-base font-medium hover:bg-primary/90 transition-colors w-full sm:w-auto flex flex-col items-center justify-center">
             <span>Let&apos;s build your website now</span>
@@ -134,7 +134,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 60 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
-          className="mt-20 md:mt-32 w-full relative flex justify-center items-center px-4 py-12 max-w-[100vw] gap-2 sm:gap-4 md:gap-6 lg:gap-8"
+          className="mt-16 md:mt-20 w-full relative flex justify-center items-center px-4 py-8 max-w-[100vw] gap-2 sm:gap-4 md:gap-6 lg:gap-8"
         >
           {mockups.map((mockup) => (
             <MockupCard 

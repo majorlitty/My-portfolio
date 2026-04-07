@@ -5,11 +5,11 @@ import Image from 'next/image';
 import React, { useState } from 'react';
 
 const mockups = [
-  { id: 1, src: 'https://i.postimg.cc/prKqgVs6/screencapture_brooklynlookin_netlify_app_2026_03_27_21_36_08hero.png', rotate: -12, yClass: 'translate-y-12 sm:translate-y-16 md:translate-y-24', z: 10, depth: 3 },
-  { id: 2, src: 'https://i.postimg.cc/QtK3K5MQ/screencapture_arlingtonrentals_netlify_app_2026_03_27_21_45_47hero.png', rotate: -6, yClass: 'translate-y-4 sm:translate-y-6 md:translate-y-8', z: 20, depth: 2, pill: { text: 'designer ↗', color: 'bg-blue-500', position: '-top-4 -left-4 md:-top-6 md:-left-6' } },
-  { id: 3, src: 'https://i.postimg.cc/bJShSbvD/screencapture_cosmo_dent_netlify_app_2026_03_27_21_43_28hero.png', rotate: 0, yClass: '-translate-y-2 sm:-translate-y-4 md:-translate-y-8', z: 30, depth: 1 },
-  { id: 4, src: 'https://i.postimg.cc/zBHrHWfX/screencapture_dispenroute_netlify_app_2026_03_27_21_44_54hero.png', rotate: 6, yClass: 'translate-y-4 sm:translate-y-6 md:translate-y-8', z: 20, depth: 2 },
-  { id: 5, src: 'https://i.postimg.cc/43SG3wX4/screencapture_venicedetailing_netlify_app_2026_03_27_21_50_31hero.png', rotate: 12, yClass: 'translate-y-12 sm:translate-y-16 md:translate-y-24', z: 10, depth: 3, pill: { text: 'artist ↗', color: 'bg-orange-500', position: '-top-4 -right-4 md:-top-6 md:-right-6' } },
+  { id: 1, src: 'https://i.postimg.cc/prKqgVs6/screencapture_brooklynlookin_netlify_app_2026_03_27_21_36_08hero.png', rotate: 0, yClass: '-translate-y-4 md:-translate-y-8', z: 10, depth: 1 },
+  { id: 2, src: 'https://i.postimg.cc/QtK3K5MQ/screencapture_arlingtonrentals_netlify_app_2026_03_27_21_45_47hero.png', rotate: 0, yClass: 'translate-y-4 md:translate-y-8', z: 20, depth: 2, pill: { text: 'designer ↗', color: 'bg-blue-500', position: '-top-4 -left-4 md:-top-6 md:-left-6' } },
+  { id: 3, src: 'https://i.postimg.cc/bJShSbvD/screencapture_cosmo_dent_netlify_app_2026_03_27_21_43_28hero.png', rotate: 0, yClass: '-translate-y-4 md:-translate-y-8', z: 30, depth: 1 },
+  { id: 4, src: 'https://i.postimg.cc/zBHrHWfX/screencapture_dispenroute_netlify_app_2026_03_27_21_44_54hero.png', rotate: 0, yClass: 'translate-y-4 md:translate-y-8', z: 20, depth: 2 },
+  { id: 5, src: 'https://i.postimg.cc/43SG3wX4/screencapture_venicedetailing_netlify_app_2026_03_27_21_50_31hero.png', rotate: 0, yClass: '-translate-y-4 md:-translate-y-8', z: 10, depth: 1, pill: { text: 'artist ↗', color: 'bg-orange-500', position: '-top-4 -right-4 md:-top-6 md:-right-6' } },
 ];
 
 function MockupCard({ 
@@ -48,7 +48,7 @@ function MockupCard({
         >
           <motion.div
             style={{ rotate: mockup.rotate }}
-            className="relative w-[160px] sm:w-[220px] md:w-[280px] lg:w-[340px] aspect-[4/5] rounded-xl md:rounded-2xl shadow-2xl border border-subtle/50 bg-background transition-all duration-500 hover:scale-105"
+            className="relative w-[120px] sm:w-[160px] md:w-[200px] lg:w-[240px] aspect-[4/5] rounded-xl md:rounded-2xl shadow-2xl border border-subtle/50 bg-background transition-all duration-500 hover:scale-105"
           >
             <div className="absolute inset-0 overflow-hidden rounded-xl md:rounded-2xl">
               <Image src={mockup.src} fill className="object-cover" alt="Mockup" />
@@ -134,7 +134,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 60 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
-          className="mt-20 md:mt-32 w-full relative flex justify-center items-center px-4 h-[300px] sm:h-[400px] md:h-[500px] max-w-[100vw] -space-x-16 sm:-space-x-24 md:-space-x-32 lg:-space-x-40"
+          className="mt-20 md:mt-32 w-full relative flex justify-center items-center px-4 py-12 max-w-[100vw] gap-2 sm:gap-4 md:gap-6 lg:gap-8"
         >
           {mockups.map((mockup) => (
             <MockupCard 

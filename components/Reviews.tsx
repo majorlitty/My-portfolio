@@ -26,7 +26,7 @@ const reviews = [
 
 export function Reviews() {
   return (
-    <section className="py-32 bg-subtle/20">
+    <section className="py-20 md:py-32 bg-subtle/20">
       <div className="max-w-7xl mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -35,7 +35,7 @@ export function Reviews() {
           transition={{ duration: 0.6 }}
           className="text-center mb-20"
         >
-          <h2 className="font-heading text-4xl md:text-6xl font-bold tracking-tight text-primary">
+          <h2 className="font-heading text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-primary">
             What our clients are saying
           </h2>
         </motion.div>

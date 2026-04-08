@@ -48,7 +48,7 @@ function MockupCard({
         >
           <motion.div
             style={{ rotate: mockup.rotate }}
-            className="relative w-[120px] sm:w-[160px] md:w-[200px] lg:w-[240px] aspect-[4/5] rounded-xl md:rounded-2xl shadow-2xl border border-subtle/50 bg-background transition-all duration-500 hover:scale-105"
+            className="relative w-[140px] sm:w-[160px] md:w-[200px] lg:w-[240px] aspect-[4/5] rounded-xl md:rounded-2xl shadow-2xl border border-subtle/50 bg-background transition-all duration-500 hover:scale-105 snap-center"
           >
             <div className="absolute inset-0 overflow-hidden rounded-xl md:rounded-2xl">
               <Image src={mockup.src} fill className="object-cover" alt="Mockup" />
@@ -85,7 +85,7 @@ export function Hero() {
 
   return (
     <section 
-      className="relative pt-28 md:pt-32 pb-20 overflow-hidden" 
+      className="relative pt-24 md:pt-32 pb-16 md:pb-20 overflow-hidden" 
       onMouseMove={handleMouseMove}
       onMouseLeave={() => {
         mouseX.set(0);
@@ -97,7 +97,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-          className="font-heading text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-primary max-w-5xl leading-[1.1]"
+          className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-primary max-w-5xl leading-[1.1]"
         >
           We build high-converting websites for local and service businesses
         </motion.h1>
@@ -134,7 +134,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 60 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
-          className="mt-16 md:mt-20 w-full relative flex justify-center items-center px-4 py-8 max-w-[100vw] gap-2 sm:gap-4 md:gap-6 lg:gap-8"
+          className="mt-12 md:mt-20 w-full relative flex justify-start md:justify-center items-center px-4 md:px-0 py-8 max-w-[100vw] gap-4 sm:gap-6 lg:gap-8 overflow-x-auto md:overflow-visible snap-x snap-mandatory hide-scrollbar"
         >
           {mockups.map((mockup) => (
             <MockupCard 

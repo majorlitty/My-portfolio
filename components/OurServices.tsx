@@ -33,7 +33,7 @@ const services = [
 
 export function OurServices() {
   return (
-    <section id="services" className="py-32 bg-primary text-background">
+    <section id="services" className="py-20 md:py-32 bg-primary text-background">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           <motion.div
@@ -43,7 +43,7 @@ export function OurServices() {
             transition={{ duration: 0.6 }}
             className="lg:sticky lg:top-32 h-fit"
           >
-            <h2 className="font-heading text-4xl md:text-6xl font-bold tracking-tight mb-6">
+            <h2 className="font-heading text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight mb-6">
               Solutions that fit your vision
             </h2>
             <p className="text-xl text-subtle/80 max-w-md leading-relaxed">

@@ -28,8 +28,8 @@ export function Navbar() {
           </Link>
         </nav>
 
-        <button className="bg-primary text-background px-5 py-2.5 rounded-full text-sm font-medium hover:bg-primary/90 transition-colors">
-          Schedule a free call
+        <button className="bg-primary text-background px-4 py-2 sm:px-5 sm:py-2.5 rounded-full text-xs sm:text-sm font-medium hover:bg-primary/90 transition-colors">
+          Let's Talk
         </button>
       </div>
     </motion.header>

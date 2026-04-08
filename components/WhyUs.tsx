@@ -23,7 +23,7 @@ const reasons = [
 
 export function WhyUs() {
   return (
-    <section id="why-us" className="py-32 bg-background">
+    <section id="why-us" className="py-20 md:py-32 bg-background">
       <div className="max-w-7xl mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -32,7 +32,7 @@ export function WhyUs() {
           transition={{ duration: 0.6 }}
           className="text-center mb-20"
         >
-          <h2 className="font-heading text-4xl md:text-6xl font-bold tracking-tight text-primary mb-6">
+          <h2 className="font-heading text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-primary mb-6">
             Why work with us
           </h2>
           <p className="text-xl text-secondary max-w-2xl mx-auto leading-relaxed">

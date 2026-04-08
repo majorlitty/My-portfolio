@@ -64,7 +64,7 @@ export function OurWork() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project, index) => {
-            const orderClass = project.id === 1 ? 'order-2 lg:order-1' : project.id === 2 ? 'order-1 lg:order-2' : 'order-3 lg:order-none';
+            const orderClass = project.id === 1 ? 'order-2 lg:order-none' : project.id === 2 ? 'order-1 lg:order-none' : 'order-3 lg:order-none';
 
             if (project.type === 'text') {
               return (

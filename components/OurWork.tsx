@@ -8,8 +8,7 @@ const projects = [
   {
     id: 1,
     type: 'image',
-    title: 'Apex Plumbing\nRedesign',
-    image: 'https://picsum.photos/seed/plumbing/800/600',
+    image: 'https://i.postimg.cc/gjtrHV0R/screencapture_venicedetailing_netlify_app_2026_03_27_21_33_24hero.png',
   },
   {
     id: 2,
@@ -23,26 +22,22 @@ const projects = [
   {
     id: 3,
     type: 'image',
-    title: 'Smile Dental\nPatient Portal',
-    image: 'https://picsum.photos/seed/dental/800/600',
+    image: 'https://i.postimg.cc/Zns0x8qn/screencapture_dispenroute_netlify_app_2026_03_27_21_44_54hero.png',
   },
   {
     id: 4,
-    type: 'solid',
-    title: 'Law Partners\nCorporate Identity',
-    bgColor: 'bg-[#E5B585]',
+    type: 'image',
+    image: 'https://i.postimg.cc/nrSMG4LD/screencapture_cosmo_dent_netlify_app_2026_03_27_21_43_28_sc1.png',
   },
   {
     id: 5,
-    type: 'solid',
-    title: 'Green Landscaping\nPortfolio',
-    bgColor: 'bg-[#9BA892]',
+    type: 'image',
+    image: 'https://i.postimg.cc/d3NDj20h/screencapture_brooklynlookin_netlify_app_2026_03_27_21_36_08hero.png',
   },
   {
     id: 6,
-    type: 'solid',
-    title: 'Elite Auto Detail\nE-commerce',
-    bgColor: 'bg-[#A9B4C2]',
+    type: 'image',
+    image: 'https://i.postimg.cc/Zns0x85G/screencapture_arlingtonrentals_netlify_app_2026_03_27_21_45_47hero.png',
   }
 ];
 
@@ -81,7 +76,7 @@ export function OurWork() {
                   </div>
                   <div className="flex-1 flex flex-col items-center justify-center">
                     <h3 className={`font-heading text-3xl font-medium ${project.textColor} mb-4 leading-tight`}>
-                      {project.title.split('\n').map((line, i) => (
+                      {project.title?.split('\n').map((line, i) => (
                         <span key={i} className="block">{line}</span>
                       ))}
                     </h3>
@@ -103,11 +98,13 @@ export function OurWork() {
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className={`${orderClass} ${project.bgColor} rounded-[2rem] p-8 flex flex-col justify-between h-[340px] relative group cursor-pointer overflow-hidden`}
                 >
-                  <h3 className="font-heading text-2xl text-white font-medium leading-tight z-10">
-                    {project.title.split('\n').map((line, i) => (
-                      <span key={i} className="block">{line}</span>
-                    ))}
-                  </h3>
+                  {project.title && (
+                    <h3 className="font-heading text-2xl text-white font-medium leading-tight z-10">
+                      {project.title.split('\n').map((line, i) => (
+                        <span key={i} className="block">{line}</span>
+                      ))}
+                    </h3>
+                  )}
                   <div className="flex justify-end z-10">
                     <div className="w-10 h-10 rounded-full border border-white/30 flex items-center justify-center text-white group-hover:bg-white group-hover:text-zinc-900 transition-colors duration-300">
                       <ArrowRight className="w-5 h-5" />
@@ -129,18 +126,20 @@ export function OurWork() {
               >
                 <Image
                   src={project.image!}
-                  alt={project.title}
+                  alt={project.title || 'Project image'}
                   fill
                   className="object-cover transition-transform duration-700 group-hover:scale-105"
                   referrerPolicy="no-referrer"
                 />
                 <div className="absolute inset-0 bg-gradient-to-b from-zinc-900/60 via-zinc-900/20 to-zinc-900/60" />
                 
-                <h3 className="font-heading text-2xl text-white font-medium leading-tight z-10">
-                  {project.title.split('\n').map((line, i) => (
-                    <span key={i} className="block">{line}</span>
-                  ))}
-                </h3>
+                {project.title && (
+                  <h3 className="font-heading text-2xl text-white font-medium leading-tight z-10">
+                    {project.title.split('\n').map((line, i) => (
+                      <span key={i} className="block">{line}</span>
+                    ))}
+                  </h3>
+                )}
                 <div className="flex justify-end z-10">
                   <div className="w-10 h-10 rounded-full border border-white/30 flex items-center justify-center text-white group-hover:bg-white group-hover:text-zinc-900 transition-colors duration-300">
                     <ArrowRight className="w-5 h-5" />
